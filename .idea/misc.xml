@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/admin/AndroidStudioProjects/ex11/app/src/main/res/drawable-v24/toast_layout_style.xml" value="0.15833333333333333" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/ex11/app/src/main/res/layout/activity_main.xml" value="0.16590678824721378" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/ex11/app/src/main/res/layout/dialog.xml" value="0.16590678824721378" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/ex11/app/src/main/res/layout/ex11_01.xml" value="0.16590678824721378" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/ex11/app/src/main/res/layout/ex11_04.xml" value="0.16590678824721378" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/ex11/app/src/main/res/layout/ex11_06.xml" value="0.16590678824721378" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/ex11/app/src/main/res/layout/ex11_12.xml" value="0.1656534954407295" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/ex11/app/src/main/res/layout/toast.xml" value="0.1656534954407295" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
