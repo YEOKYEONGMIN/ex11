@@ -1,5 +1,6 @@
 package com.example.ex11;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -13,8 +14,10 @@ import android.widget.EditText;
 import android.widget.Gallery;
 import android.widget.GridLayout;
 import android.widget.GridView;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -49,15 +52,16 @@ public class MainActivity extends AppCompatActivity {
 //        setContentView(R.layout.ex11_01);
 //        setContentView(R.layout.ex11_04);
 //        setContentView(R.layout.ex11_06);
-        setContentView(R.layout.ex11_12);
+//        setContentView(R.layout.ex11_12);
+        setContentView(R.layout.ex11_16);
 
 
 
 //        ex1();
 //        ex4();
 //        grid();
-        gallery();
-
+//        gallery();
+        ex16();
 
     }
 
@@ -171,10 +175,11 @@ public class MainActivity extends AppCompatActivity {
     void gallery(){
         setTitle("갤러리 영화 포스터");
         Gallery gallery = (Gallery) findViewById(R.id.gallery1);
+
         MyGalleryAdapter galAdapter = new MyGalleryAdapter(this);
         gallery.setAdapter(galAdapter);
     }
-
+    @SuppressLint("ClickableViewAccessibility")
     public class MyGalleryAdapter extends BaseAdapter{
         Context context;
         public MyGalleryAdapter(Context c){
@@ -207,6 +212,8 @@ public class MainActivity extends AppCompatActivity {
 
             final int pos = i;
             imageView.setOnTouchListener(new View.OnTouchListener() {
+
+                @SuppressLint("ViewHolder")
                 @Override
                 public boolean onTouch(View view, MotionEvent motionEvent) {
                     ImageView ivPoster = (ImageView) findViewById(R.id.ivPoster);
@@ -224,5 +231,29 @@ public class MainActivity extends AppCompatActivity {
 
             return imageView;
         }
+    }
+    void ex16(){
+        setTitle("스피너 테스트");
+
+        Spinner spinner = (Spinner) findViewById(R.id.spinner1);
+        ArrayAdapter<String> adapter;
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,posetTitle);
+        spinner.setAdapter(adapter);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                ImageView ivPoster = (ImageView) findViewById(R.id.ivPoster);
+                ivPoster.setScaleType(ImageView.ScaleType.FIT_CENTER);
+                ivPoster.setImageResource(posterID[i]);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+
     }
 }
